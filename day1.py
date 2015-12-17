@@ -1,3 +1,4 @@
+
 def get_final_floor():
     with open('day1_input.txt') as f:
         data = f.read()
