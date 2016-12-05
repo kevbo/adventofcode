@@ -1,14 +1,14 @@
 session_name: Advent of Code
 start_directory: ~/src/adventofcode
 windows:
-  - window_name: Git/DevServer
+  - window_name: Git/BPython
     layout: main-vertical
     panes:
       - shell_command:
         - git status
         focus: true
       - shell_command:
-        - make bpython
+        - make shell
   - window_name: vim
     panes:
       - shell_command:
