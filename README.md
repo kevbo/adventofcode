@@ -8,8 +8,8 @@ workflow tools.
 ### Dependencies
 * [`pyenv`](https://github.com/yyuu/pyenv) (`brew install pyenv`)
 * [`pipenv`](https://github.com/kennethreitz/pipenv) (`brew install pipenv`)
-* Optional: `[tmux](https://github.com/tmux/tmux/wiki)` (`brew install tmux`)
-* Optional: `[vim](http://www.vim.org/)` (`brew install vim`)
+* Optional: [`tmux`](https://github.com/tmux/tmux/wiki) (`brew install tmux`)
+* Optional: [`vim`](http://www.vim.org/) (`brew install vim`)
 
 ### Starting up the dev environment
 
