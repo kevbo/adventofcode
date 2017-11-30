@@ -1,18 +1,25 @@
 [[source]]
+
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
+
 [packages]
+
 requests = "*"
 
+
 [dev-packages]
+
 pytest = "*"
 bpython = "*"
 pyflakes = "*"
 pylint = "*"
-pep8 = "*"
 tmuxp = "*"
+pycodestyle = "*"
+
 
 [requires]
+
 python_version = "3.6.3"
