@@ -1,5 +1,0 @@
-bpython
-pyflakes
-pylint
-pep8
-tmuxp

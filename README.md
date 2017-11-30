@@ -6,9 +6,10 @@ workflow tools.
 ## Getting up and running
 
 ### Dependencies
-
-* A copy of the Python version specified in `.python-version` (along with a copy of `virtualenv`). Or just install [`pyenv`](https://github.com/yyuu/pyenv).
-* `tmux` (`brew install tmux`)
+* [`pyenv`](https://github.com/yyuu/pyenv) (`brew install pyenv`)
+* [`pipenv`](https://github.com/kennethreitz/pipenv) (`brew install pipenv`)
+* Optional: `tmux` (`brew install tmux`)
+* Optional: `vim` (`brew install vim`)
 
 ### Starting up the dev environment
 

@@ -6,6 +6,7 @@ windows:
     panes:
       - shell_command:
         - git status
+        - pipenv shell
         focus: true
       - shell_command:
         - make shell

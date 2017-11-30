@@ -1,21 +1,14 @@
-PYTHON = $(ENV)/bin/python
-ENV = $(CURDIR)/env
+deps:
+	pipenv install --dev
 
-env:
-	virtualenv --python=$(shell which python2.7) $(ENV)
-
-deps: env
-	$(ENV)/bin/pip install -U pip setuptools
-	$(ENV)/bin/pip install -Ur requirements.txt
-
-shell:
-	$(ENV)/bin/bpython
+shell: deps
+	pipenv run bpython
 
 run start: deps
-	$(ENV)/bin/tmuxp load tmuxp-advent.yaml
+	pipenv run tmuxp load tmuxp-advent.yaml
 
 clean:
-	rm -rf $(ENV)
+	pipenv --rm
 	find . -iname '*.pyc' -exec rm {} \;
 
 
