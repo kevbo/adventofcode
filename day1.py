@@ -7,7 +7,7 @@ def compute_captcha(seq):
         try:
             if digit == seq[index+1]:
                 total += int(digit)
-        except IndexError as e:
+        except IndexError:
             if digit == seq[0]:
                 total += int(digit)
     return total
@@ -56,6 +56,7 @@ class TestCaptcha(unittest.TestCase):
         self.assertEqual(compute_halfway_captcha(self.case7[0]), self.case7[1])
         self.assertEqual(compute_halfway_captcha(self.case8[0]), self.case8[1])
         self.assertEqual(compute_halfway_captcha(self.case9[0]), self.case9[1])
+
 
 if __name__ == '__main__':
     # unittest.main()
