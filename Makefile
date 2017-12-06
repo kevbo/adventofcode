@@ -17,7 +17,7 @@ ci-install:
 	pipenv install --dev --ignore-pipfile
 
 test:
-	pipenv run python -m unittest
+	pipenv run coverage run -m unittest
 	pipenv check
 	pipenv check --style *.py
 
