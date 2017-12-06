@@ -18,6 +18,7 @@ ci-install:
 
 test:
 	pipenv run coverage run -m unittest
+	pipenv run coverage report
 	pipenv check
 	pipenv check --style *.py
 
