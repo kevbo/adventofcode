@@ -18,8 +18,9 @@ ci-install:
 
 test:
 	pipenv run coverage run -m unittest
-	pipenv run coverage report
+	pipenv run coverage report -m
+	pipenv run coverage xml
 	pipenv check
 	pipenv check --style *.py
 
-.PHONY: shell clean
+.PHONY: shell clean test ci-install run start deps
