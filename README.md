@@ -1,5 +1,7 @@
 # Advent of Code
 
+[![Build Status](https://travis-ci.org/kevbo/adventofcode.svg?branch=master)](https://travis-ci.org/kevbo/adventofcode)
+
 Where I store my code/answers for [Advent of Code](http://adventofcode.com/) in Python. Also an excuse to work on a project with tmux and vim as my only
 workflow tools.
 
