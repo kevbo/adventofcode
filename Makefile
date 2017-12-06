@@ -9,7 +9,16 @@ run start: deps
 
 clean:
 	pipenv --rm
-	find . -iname '*.pyc' -exec rm {} \;
+	find . -iname '*.pyc' -exec rm {} 
+	rm -rf __pycache__
 
+ci-install:
+	pip install pipenv
+	pipenv install --dev --ignore-pipfile
+
+test:
+	pipenv run python -m unittest
+	pipenv check
+	pipenv check --style *.py
 
 .PHONY: shell clean
