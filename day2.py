@@ -19,19 +19,19 @@ def checksum2(matrix):
     return total
 
 
-def create_matrix(lines):
+def create_matrix(lines):  # pragma: no cover
     matrix = []
     for row in lines:
         matrix.append([int(i) for i in row.split()])
     return matrix
 
 
-def main():
+def main():  # pragma: no cover
     with open('day2_input.txt') as f:
         matrix = create_matrix(f.readlines())
         print(checksum(matrix))
         print(checksum2(matrix))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()

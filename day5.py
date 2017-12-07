@@ -1,4 +1,4 @@
-def load_offsets(filename):
+def load_offsets(filename):  # pragma: no cover
     with open(filename) as f:
         offsets = f.readlines()
     return [int(offset) for offset in offsets]
@@ -29,7 +29,7 @@ class OffsetHandler(object):
                 break
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     # Part 1
     o = OffsetHandler(load_offsets('day5_input.txt'))
     o.run()

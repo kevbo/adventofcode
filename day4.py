@@ -14,7 +14,7 @@ def is_valid2(passphrase):
     return True
 
 
-def main():
+def main():  # pragma: no cover
     with open('day4_input.txt') as f:
         phrases = f.readlines()
     valids = [p for p in phrases if is_valid(p)]
@@ -23,5 +23,5 @@ def main():
     print(len(valid2s))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()

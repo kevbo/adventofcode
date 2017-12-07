@@ -20,7 +20,7 @@ def compute_halfway_captcha(seq):
     return total
 
 
-def main():
+def main():  # pragma: no cover
     with open('day1_input.txt') as f:
         data = f.read().strip()
         result = compute_captcha(data)
@@ -29,5 +29,5 @@ def main():
         print(result2)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()

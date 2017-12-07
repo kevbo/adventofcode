@@ -103,7 +103,7 @@ class Walker(object):
             self.next_step += 1
 
 
-def main(steps):
+def main(steps):  # pragma: no cover
     w = Walker(steps)
     print(w.get_current_distance())
     for step in range(steps)[1:]:
@@ -114,5 +114,5 @@ def main(steps):
             break
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main(312051)

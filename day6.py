@@ -29,13 +29,13 @@ class MemoryController(object):
                 self.redistributions.append(copy(self.banks))
 
 
-def main(repeat_cycle=False):
+def main(repeat_cycle=False):  # pragma: no cover
     controller = MemoryController(banks=[14, 0, 15, 12, 11, 11, 3, 5, 1, 6,
                                          8, 4, 9, 1, 8, 4])
     controller.reallocate(repeat_cycle=repeat_cycle)
     print(len(controller.redistributions))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     main()
     main(repeat_cycle=True)
