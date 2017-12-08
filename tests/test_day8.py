@@ -19,3 +19,6 @@ class TestRegisterProcessor(unittest.TestCase):
 
     def test_highest_value(self):
         self.assertEqual(self.rp.highest_value, {'a': 1})
+
+    def test_current_highest_value(self):
+        self.assertEqual(self.rp.current_highest, 10)

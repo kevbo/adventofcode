@@ -7,6 +7,7 @@ class RegisterProcessor(object):
     def __init__(self, instructions):
         self.registers = defaultdict(int)
         self.instructions = self.parse_instructions(instructions)
+        self.current_highest = 0
         for i in self.instructions:
             self.handle_instruction(i)
 
@@ -34,6 +35,8 @@ class RegisterProcessor(object):
                 self.registers[target] += int(num)
             elif operation == 'dec':
                 self.registers[target] -= int(num)
+        if self.registers[target] > self.current_highest:
+            self.current_highest = self.registers[target]
 
     @property
     def highest_value(self):
@@ -47,3 +50,4 @@ if __name__ == '__main__':  # pragma: no cover
         data = f.read()
     rp = RegisterProcessor(data)
     print('Highest value found in any register:', rp.highest_value)
+    print('Highest value ever reached during processing:', rp.current_highest)
