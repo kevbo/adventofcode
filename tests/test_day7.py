@@ -44,7 +44,6 @@ class TestDiscStack(unittest.TestCase):
         self.assertIn('padx', self.stack.get_children('tknk'))
         self.assertIn('fwft', self.stack.get_children('tknk'))
 
-
     def test_get_parent(self):
         self.assertEqual(self.stack.get_parent('ugml'), 'tknk')
         self.assertEqual(self.stack.get_parent('gyxo'), 'ugml')
@@ -58,14 +57,7 @@ class TestDiscStack(unittest.TestCase):
         self.assertEqual(self.stack.disc_weight('xhth'), 57)
         self.assertEqual(self.stack.disc_weight('padx'), 243)
 
-    def test_stack_weight(self):
-        # print(self.stack.stack_weight())
-        pass
-
     def test_find_imbalances(self):
         imbalanced, should_be = self.stack.find_imbalances('tknk')
         self.assertEqual(imbalanced, 'ugml')
         self.assertEqual(should_be, 60)
-
-    # def test_tree(self):
-        # print(self.stack.tree)
