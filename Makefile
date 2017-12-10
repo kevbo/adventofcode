@@ -23,4 +23,10 @@ test:
 	pipenv check
 	pipenv check --style *.py
 
-.PHONY: shell clean test ci-install run start deps
+new:
+	touch day$(day).py
+	touch tests/test_day$(day).py
+	touch day$(day)_input.txt
+	git checkout -b day$(day)
+
+.PHONY: shell clean test ci-install run start deps new
